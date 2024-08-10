@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories - PhotoHub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/3318035e44.js" defer></script>
+    <style>
+        /* Additional styles for accessory images and product details */
+        .product-item img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 8px;
+        }
+
+        .product-item {
+            text-align: center;
+            padding: 15px;
+            margin: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .product-item h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .product-item p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .add-to-cart-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #e65c50;
+        }
+
+        .header-spans {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .header-spans span {
+            margin-left: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-spans i {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+
+        .header-spans input[type="search"] {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+  <body onload="displayProducts()">
+    <!-- Navbar -->
+    <nav class="nav-container">
+      <!-- Website nav-menu -->
+      <ul class="nav-web">
+        <li>
+          <a href="index.html" id="logo" title="Home"
+            ><img src="img/camera-logo-24.png" alt="logo"
+          /></a>
+        </li>
+          <li><a href="products.html">Cameras</a></li>
+          <li><a href="lenses.html">Lenses</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+          <li><a href="tripods.html">Tripods</a></li>
+          <li><a href="lighting.html">Lighting</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="drones.html">Drones</a></li>
+          <li><a href="brands.html">Brands</a></li>
+          <li><a href="special.html">Special</a></li>
+      </ul>
+      <!-- Mobile nav-menu -->
+      <div class="nav-mobile">
+        <a href="index.html" id="logo" title="Home"
+          ><img src="img/camera-logo-24.png" alt="logo"
+        /></a>
+        <div id="myLinks">
+          <li><a href="products.html">Cameras</a></li>
+          <li><a href="lenses.html">Lenses</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+          <li><a href="tripods.html">Tripods</a></li>
+          <li><a href="lighting.html">Lighting</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="drones.html">Drones</a></li>
+          <li><a href="brands.html">Brands</a></li>
+          <li><a href="special.html">Special</a></li>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </nav>
+    <main>
+      <!-- Header -->
+      <header class="header">
+        <h1 class="company-name">PhotoHub</h1>
+        <div class="header-spans">
+          <span class="search"
+            ><i class="fas fa-search"></i
+            ><input
+              type="search"
+              id="search-input"
+              name="search"
+              placeholder="Search"
+          /></span>
+          <span class="user-wrapper">
+            <i class="fa-solid fa-heart"></i>
+            <a href="account.html">
+              <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="shopping-cart.html">
+              <i class="fa-solid fa-cart-shopping" value="2"></i>
+            </a>
+          </span>
+        </div>
+      </header>
+      <section class="category-section">
+            <h1 class="title">Video Equipment</h1>
+            <div class="products-container">
+                <!-- Video Equipment 1 -->
+                <article class="product-item">
+                    <video controls>
+                        <source src="img/v-1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h2>Sony Alpha 7S III</h2>
+                    <p>$3,498.00</p>
+                    <p>The Sony Alpha 7S III offers exceptional video quality with its full-frame sensor and advanced autofocus. Ideal for professional filmmakers and content creators.</p>
+                    <a href="#" class="add-to-cart-btn">Add to Cart</a>
+                </article>
+
+                <!-- Video Equipment 2 -->
+                <article class="product-item">
+                    <video controls>
+                        <source src="img/v-2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h2>Panasonic Lumix GH5</h2>
+                    <p>$1,497.99</p>
+                    <p>The Panasonic Lumix GH5 is known for its 4K video capabilities and robust build. It's perfect for both amateurs and professionals seeking high-quality video production.</p>
+                    <a href="#" class="add-to-cart-btn">Add to Cart</a>
+                </article>
+
+                <!-- Add more video equipment here -->
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-menu">
+        <nav class="footer-nav-column">
+          <ul class="footer-nav-container">
+            <li class="li-title">SHOP</li>
+            <li><a href="#">Digital cameras</a></li>
+            <li><a href="#">Film cameras</a></li>
+            <li><a href="#">Lences</a></li>
+            <li><a href="#">Accesories</a></li>
+            <li><a href="#">Tripods</a></li>
+            <li><a href="#">Lighting</a></li>
+            <li><a href="#">Video & Drones</a></li>
+            <li><a href="#">Brands</a></li>
+            <li><a href="#">Special</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav-column">
+          <ul class="footer-nav-container">
+            <li class="li-title">COMPANY INFO</li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Our stores</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav-column">
+          <ul class="footer-nav-container">
+            <li class="li-title">SHOPPING INFO</li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy and Security</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav-column subscribe">
+          <ul class="footer-nav-container">
+            <li class="li-title">SUBSCRIBE</li>
+            <p>
+              Take 5% off your first order when you sign up for our newsletter.
+            </p>
+            <span class="email"
+              ><input
+                type="email"
+                id="subscribe-input"
+                name="email"
+                placeholder="Email"
+              /><button id="subscribe-btn">Subscribe</button></span
+            >
+          </ul>
+        </nav>
+      </div>
+      <!-- Social media -->
+      <div class="social-media">
+        <a href="https://www.facebook.com/" target="_blank"
+          ><i class="fab fa-facebook-square"></i
+        ></a>
+        <a href="https://twitter.com/" target="_blank"
+          ><i class="fab fa-twitter-square"></i
+        ></a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com/" target="_blank"
+          ><i class="fab fa-youtube-square"></i
+        ></a>
+        <a href="https://www.pinterest.com/" target="_blank"
+          ><i class="fab fa-pinterest-square"></i
+        ></a>
+      </div>
+      <div class="lang-pay">
+        <!-- Language -->
+        <div class="language">
+          <i class="fa-solid fa-globe" title="Choose language"></i>
+        </div>
+        <!-- Paying methods -->
+        <div class="paying-methods">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-cc-paypal"></i>
+          <i class="fa-brands fa-cc-apple-pay"></i>
+          <p>Klarna.</p>
+        </div>
+      </div>
+      <p class="copyright">Copyright &copy; 2023 | PhotoHub</p>
+    </footer>
+  </body>
+</html>
+

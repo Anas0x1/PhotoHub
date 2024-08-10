@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories - PhotoHub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/3318035e44.js" defer></script>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* Dark mode background */
+            color: #e0e0e0; /* Light text color for dark mode */
+            margin: 0;
+            padding: 0;
+        }
+        .login-form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px); /* Adjust height for header/footer */
+            padding: 20px;
+        }
+        .login-form {
+            background: #1f1f1f;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .login-form h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #ffffff;
+            text-align: center;
+        }
+        .login-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #ffffff;
+        }
+        .login-form input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #222;
+            color: #e0e0e0;
+            font-size: 16px;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: #0056b3;
+        }
+        .login-form p {
+            margin: 10px 0 0;
+            text-align: center;
+        }
+        .login-form a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .login-form a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body onload="displayProducts()">
+    <!-- Navbar -->
+    <nav class="nav-container">
+        <!-- Website nav-menu -->
+        <ul class="nav-web">
+            <li>
+                <a href="index.html" id="logo" title="Home">
+                    <img src="img/camera-logo-24.png" alt="logo" />
+                </a>
+            </li>
+            <li><a href="products.html">Cameras</a></li>
+            <li><a href="lenses.html">Lenses</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="tripods.html">Tripods</a></li>
+            <li><a href="lighting.html">Lighting</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="drones.html">Drones</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="special.html">Special</a></li>
+        </ul>
+        <!-- Mobile nav-menu -->
+        <div class="nav-mobile">
+            <a href="index.html" id="logo" title="Home">
+                <img src="img/camera-logo-24.png" alt="logo" />
+            </a>
+            <div id="myLinks">
+                <li><a href="products.html">Cameras</a></li>
+                <li><a href="lenses.html">Lenses</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="tripods.html">Tripods</a></li>
+                <li><a href="lighting.html">Lighting</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="drones.html">Drones</a></li>
+                <li><a href="brands.html">Brands</a></li>
+                <li><a href="special.html">Special</a></li>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+    <main>
+        <!-- Header -->
+        <header class="header">
+            <h1 class="company-name">PhotoHub</h1>
+            <div class="header-spans">
+                <span class="search">
+                    <i class="fas fa-search"></i>
+                    <input type="search" id="search-input" name="search" placeholder="Search" />
+                </span>
+                <span class="user-wrapper">
+                    <i class="fa-solid fa-heart"></i>
+                    <a href="account.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <a href="shopping-cart.html">
+                        <i class="fa-solid fa-cart-shopping" value="2"></i>
+                    </a>
+                </span>
+            </div>
+        </header>
+        <div class="login-form-container">
+            <form action="#" method="post" class="login-form">
+                <h1>Create an account</h1>
+                <label for="text">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+
+                <label for="text">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+
+                <button type="submit" class="register-btn">Register</button>
+
+                <p>If you have an account? <a href="account.html">Login</a></p>
+                <p><a href="forgot-password.html">Forgot password?</a></p>
+            </form>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-menu">
+            <nav class="footer-nav-column">
+                <ul class="footer-nav-container">
+                    <li class="li-title">SHOP</li>
+                    <li><a href="#">Digital cameras</a></li>
+                    <li><a href="#">Film cameras</a></li>
+                    <li><a href="#">Lenses</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Tripods</a></li>
+                    <li><a href="#">Lighting</a></li>
+                    <li><a href="#">Video & Drones</a></li>
+                    <li><a href="#">Brands</a></li>
+                    <li><a href="#">Special</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-nav-column">
+                <ul class="footer-nav-container">
+                    <li class="li-title">COMPANY INFO</li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Our stores</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-nav-column">
+                <ul class="footer-nav-container">
+                    <li class="li-title">SHOPPING INFO</li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy and Security</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-nav-column subscribe">
+                <ul class="footer-nav-container">
+                    <li class="li-title">SUBSCRIBE</li>
+                    <p>Take 5% off your first order when you sign up for our newsletter.</p>
+                    <span class="email">
+                        <input type="email" id="subscribe-input" name="email" placeholder="Email" />
+                        <button id="subscribe-btn">Subscribe</button>
+                    </span>
+                </ul>
+            </nav>
+        </div>
+        <!-- Social media -->
+        <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square"></i></a>
+            <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-square"></i></a>
+        </div>
+        <div class="lang-pay">
+            <!-- Language -->
+            <div class="language">
+                <i class="fa-solid fa-globe" title="Choose language"></i>
+            </div>
+            <!-- Paying methods -->
+            <div class="paying-methods">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+                <i class="fa-brands fa-cc-apple-pay"></i>
+                <p>Klarna.</p>
+            </div>
+        </div>
+        <p class="copyright">Copyright &copy; 2023 | PhotoHub</p>
+    </footer>
+</body>
+</html>
